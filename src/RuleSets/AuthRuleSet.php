@@ -4,31 +4,31 @@ namespace Rey\Validation\RuleSets;
 
 class AuthRuleSet
 {
-    public $user_pass = [
+    public const USER_PASS = [
         'username' => [
-            'label' => 'Default.username',
+            'label' => 'Validation.username',
             'rules' => 'required'
         ],
         'password' => [
-            'label' => 'Default.password',
+            'label' => 'Validation.password',
             'rules' => 'required'
         ]
     ];
 
-    public $email_pass = [
+    public const EMAIL_PASS = [
         'email' => [
-            'label' => 'Default.email',
+            'label' => 'Validation.email',
             'rules' => 'required|valid_email'
         ],
         'password' => [
-            'label' => 'Default.password',
+            'label' => 'Validation.password',
             'rules' => 'required'
         ]
     ];
 
-    public $phone = [
+    public const PHONE = [
         'phone' => [
-            'label' => 'Default.phone',
+            'label' => 'Validation.phone',
             'rules' => 'required|iranphone'
         ],
     ];
