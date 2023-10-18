@@ -20,12 +20,21 @@ class AuthRuleSet
         'rules' => 'required|iranphone'
     ];
 
+    private const _REQ_MIN3_MAX180 = 'required|min_length[3]|max_length[180]';
 
     // Public
     public const USER_PASS = [
         'username' => [
             'label' => 'Validation.username',
-            'rules' => 'required|min_length[3]|max_length[180]'
+            'rules' => self::_REQ_MIN3_MAX180
+        ],
+        'password' => self::_PASSWORD
+    ];
+
+    public const LOGIN_PASS = [
+        'login' => [
+            'label' => 'Validation.login',
+            'rules' => self::_REQ_MIN3_MAX180
         ],
         'password' => self::_PASSWORD
     ];
@@ -56,7 +65,7 @@ class AuthRuleSet
     public const NAME_PHONE_EMAIL_PASS = [
         'name' => [
             'label' => 'Validation.name',
-            'rules' => 'required|min_length[3]|max_length[180]'
+            'rules' => self::_REQ_MIN3_MAX180
         ],
         'phone' => self::_PHONE,
         'email' => self::_EMAIL,
